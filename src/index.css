@@ -7,3 +7,23 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+### 2. Actualiza tu archivo `src/main.jsx`
+Abre el archivo `src/main.jsx` que ya tienes en GitHub y reemplaza todo su contenido por esto (nota que aquí se importa el `index.css`):
+
+```javascript
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import './index.css'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
+
+### 3. Asegúrate del nombre de tu archivo principal
+Vercel y Vite (la herramienta que configuramos en el `package.json`) buscan por defecto un archivo llamado `App.jsx` dentro de la carpeta `src`. Verifica en tu GitHub que el archivo que contiene todo el código del portafolio se llame exactamente `App.jsx` (y no `portfolio_mayerly.jsx`).
+
+Una vez que guardes (*commit*) estos tres detalles en GitHub, Vercel detectará el cambio y en un minuto tu enlace se verá profesional, oscuro y con los estilos terracota aplicados.
